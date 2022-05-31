@@ -1,6 +1,6 @@
-package service;
+package my.spring.service;
 
-import domain.Quiz;
+import my.spring.domain.Quiz;
 
 import java.util.List;
 

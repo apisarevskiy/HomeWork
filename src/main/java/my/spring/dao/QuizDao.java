@@ -1,6 +1,6 @@
-package dao;
+package my.spring.dao;
 
-import domain.Quiz;
+import my.spring.domain.Quiz;
 
 import java.util.List;
 

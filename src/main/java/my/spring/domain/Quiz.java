@@ -1,4 +1,4 @@
-package domain;
+package my.spring.domain;
 
 import java.util.List;
 

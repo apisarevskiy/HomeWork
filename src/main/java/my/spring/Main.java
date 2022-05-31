@@ -1,8 +1,10 @@
-import domain.Quiz;
+package my.spring;
+
+import my.spring.domain.Quiz;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import service.QuizService;
+import my.spring.service.QuizService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +28,6 @@ public class Main {
 
         Quiz one = service.getQuiz("Первый вопрос", answers);
 
-        System.out.println(one.getQuestion());
         one.showQuiz();
 
 

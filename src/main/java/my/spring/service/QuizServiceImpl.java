@@ -1,7 +1,7 @@
-package service;
+package my.spring.service;
 
-import dao.QuizDao;
-import domain.Quiz;
+import my.spring.dao.QuizDao;
+import my.spring.domain.Quiz;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
