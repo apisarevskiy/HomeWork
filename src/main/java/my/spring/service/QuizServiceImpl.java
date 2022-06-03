@@ -16,7 +16,8 @@ public class QuizServiceImpl implements QuizService {
     }
 
     @Override
-    public Quiz getQuiz(String q, List<String> answers) {
-        return dao.findQuiz(q, answers);
+    public Quiz getQuiz(String questionQuiz, List<String> answersQuiz) {
+
+        return dao.findQuiz(questionQuiz, answersQuiz);
     }
 }

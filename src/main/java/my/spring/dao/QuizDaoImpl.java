@@ -9,7 +9,7 @@ import java.util.List;
 public class QuizDaoImpl implements QuizDao {
 
     @Override
-    public Quiz findQuiz(String q, List<String> answers) {
-        return new Quiz(q, answers);
+    public Quiz findQuiz(String questionQuiz, List<String> answersQuiz) {
+        return new Quiz(questionQuiz, answersQuiz);
     }
 }

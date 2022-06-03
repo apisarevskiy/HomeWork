@@ -1,13 +1,16 @@
 package my.spring;
 
 import my.spring.domain.Quiz;
+import my.spring.service.ApplicationRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import my.spring.service.QuizService;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 @Configuration
 @ComponentScan
@@ -18,18 +21,10 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(Main.class);
 
-        QuizService service = context.getBean(QuizService.class);
+        QuizService quizService = context.getBean(QuizService.class);
 
-        List<String> answers = new ArrayList<String>();
-        answers.add("Ответ 1");
-        answers.add("Ответ 2");
-        answers.add("Ответ 3");
-        answers.add("Ответ 4");
-
-        Quiz one = service.getQuiz("Первый вопрос", answers);
-
-        one.showQuiz();
-
-
+        ApplicationRunner application = new ApplicationRunner(quizService);
+        application.runApplication();
     }
+
 }

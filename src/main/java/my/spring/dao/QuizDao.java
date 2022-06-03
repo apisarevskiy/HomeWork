@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface QuizDao {
 
-    Quiz findQuiz(String q, List<String> answers);
+    Quiz findQuiz(String questionQuiz, List<String> answersQuiz);
 }

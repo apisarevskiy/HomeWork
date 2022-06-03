@@ -5,24 +5,27 @@ import java.util.List;
 // Объявляем класс викторина, который содержит вопрос и список ответов
 public class Quiz {
 
-    private final String question;
-    private final List<String> answers;
+    private final String questionQuiz;
+    private final List<String> answersQuiz;
 
-    public Quiz(String q, List<String> answers) {
-        this.question = q;
-        this.answers = answers;
+    public Quiz(String questionQuiz, List<String> answersQuiz) {
+        this.questionQuiz = questionQuiz;
+        this.answersQuiz = answersQuiz;
     }
 
-    public void showQuiz() {
-        System.out.println(question);
+    public void showQuestionQuiz() {
+        System.out.println(questionQuiz);
+    }
 
-        for(int i=0; i < answers.size(); i++) {
-            System.out.println(i + ". " + answers.get(i));
+    public void showAnswersQuiz() {
+
+        for(int i = 0; i < answersQuiz.size(); i++) {
+            System.out.println((i+1) + ". " + answersQuiz.get(i));
         }
     }
 
-    public String getQuestion() {return question;}
+    public String getQuestion() {return questionQuiz;}
 
-    public List<String> getAnswers() {return answers;}
+    public List<String> getAnswers() {return answersQuiz;}
 
 }
