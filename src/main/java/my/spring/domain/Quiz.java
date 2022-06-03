@@ -14,6 +14,7 @@ public class Quiz {
     }
 
     public void showQuestionQuiz() {
+        System.out.println("");
         System.out.println(questionQuiz);
     }
 

@@ -25,6 +25,29 @@ public class ApplicationRunner {
 
         configApplication();
         showListofQuiz();
+        playQuiz();
+    }
+
+    public void playQuiz() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Do you want to start QUIZ, enter y?");
+        System.out.print("Your answer: ");
+        String userChoice = scanner.nextLine();
+
+        if (userChoice.equals("y")) {
+
+            System.out.println("Choose the correct answer to the quetsion: ");
+
+            for (var instanceQuiz : listOfQuiz) {
+                instanceQuiz.showQuestionQuiz();
+                instanceQuiz.showAnswersQuiz();
+                System.out.print("Your answer: ");
+                userChoice = scanner.nextLine();
+            }
+        } else {
+            System.out.println("We wish you good luck. Come back to us again!");
+        }
     }
 
     public void configApplication() {
@@ -59,7 +82,6 @@ public class ApplicationRunner {
     public void showListofQuiz() {
 
         for (var instanceQuiz : listOfQuiz) {
-           System.out.println("");
            instanceQuiz.showQuestionQuiz();
            instanceQuiz.showAnswersQuiz();
         }
