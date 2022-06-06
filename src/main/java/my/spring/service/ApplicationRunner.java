@@ -28,9 +28,11 @@ public class ApplicationRunner {
         playQuiz();
     }
 
+    // Запускаем викторину
     public void playQuiz() {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println(" ");
         System.out.println("Do you want to start QUIZ, enter y?");
         System.out.print("Your answer: ");
         String userChoice = scanner.nextLine();
@@ -58,6 +60,7 @@ public class ApplicationRunner {
         readFileCsv(pathFileCsv);
     }
 
+    // Добавляем новый вопрос и ответы в список викторины
     public void putListOfQuiz(String sentence[]) {
 
         List<String> answersQuiz = new ArrayList<String>();
@@ -79,6 +82,7 @@ public class ApplicationRunner {
 
     }
 
+    // Отображаем вопросы и ответы викторины
     public void showListofQuiz() {
 
         for (var instanceQuiz : listOfQuiz) {
@@ -87,6 +91,7 @@ public class ApplicationRunner {
         }
     }
 
+    // Читаем настройки с CSV файла
     public void readFileCsv(String fileCsv) {
 
         try {
@@ -104,6 +109,7 @@ public class ApplicationRunner {
         }
     }
 
+    // Читаем properties файл и из него получаем путь к CSV файлу
     public void readFileProperties(String fileProperties) {
 
         Properties property = new Properties();
