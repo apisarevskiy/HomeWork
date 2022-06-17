@@ -7,10 +7,12 @@ public class Quiz {
 
     private final String questionQuiz;
     private final List<String> answersQuiz;
+    private final int rightAnswer;
 
-    public Quiz(String questionQuiz, List<String> answersQuiz) {
+    public Quiz(String questionQuiz, List<String> answersQuiz, int rightAnswer) {
         this.questionQuiz = questionQuiz;
         this.answersQuiz = answersQuiz;
+        this.rightAnswer = rightAnswer;
     }
 
     public void showQuestionQuiz() {
@@ -29,4 +31,7 @@ public class Quiz {
 
     public List<String> getAnswers() {return answersQuiz;}
 
+    public int getRightAnswer() {
+        return rightAnswer;
+    }
 }
